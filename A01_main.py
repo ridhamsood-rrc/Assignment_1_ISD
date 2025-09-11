@@ -76,7 +76,7 @@ def main():
     # 8. Attempt to withdraw a valid amount of your choice from the BankAccount create in step 3. 
     try:
         deposit_amount = BankAccount.withdraw(bank_account, 221)
-        print(deposit_amount)
+        print("Amount has been withdrawn.")
     except ValueError as e:
         print (e)
 
