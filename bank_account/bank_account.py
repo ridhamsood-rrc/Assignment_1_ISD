@@ -69,11 +69,10 @@ class BankAccount:
 
         try:
             updated_balance = float(amount)
-            final_balance = updated_balance + self.__balance
+            self.__balance += amount
         except ValueError:
-            final_balance = self.__balance
-
-        return final_balance
+            updated_balance = self.__balance
+      
 
     def deposit(self, amount:int) -> None:
         """The amount deposited to the account.
@@ -94,9 +93,8 @@ class BankAccount:
         if valid_amount >= 0:
                 self.update_balance(valid_amount)
         else:
-            raise ValueError(f"Deposit amount: ${amount} must be positive.")
+            raise ValueError(f"Deposit amount: ${amount:,.2f} must be positive.")
 
-        return valid_amount
         
     def withdraw(self, amount:int) -> None:
         """The withdraw method to calculate the balance.
@@ -121,11 +119,10 @@ class BankAccount:
                 real_amount = valid_amount * -1
                 self.update_balance(real_amount)
             else:
-                raise ValueError(f"Withdraw amount: ${amount} must not exceed the current balance: ${self.__balance}")
+                raise ValueError(f"Withdraw amount: ${amount:,.2f} must not exceed the current balance: ${self.__balance}")
         else:
-            raise ValueError(f"Withdraw amount: ${amount} must be positive.")
+            raise ValueError(f"Withdraw amount: ${amount:,.2f} must be positive.")
         
-        return real_amount
 
     def __str__(self) -> str:
         """The str method to display the final content.
