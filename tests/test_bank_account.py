@@ -72,9 +72,9 @@ class TestClass(unittest.TestCase):
         # Act
         actual = BankAccount.update_balance(self.bank_account, 31)
 
-        # Assert
-        expected = 2162.123
-        self.assertEqual(actual, expected)
+        self.assertIsNone(actual)
+
+        self.assertEqual(2162.123, self.bank_account.balance)
 
     def test_update_balance_when_negative_value_is_received(self):
 
@@ -82,9 +82,9 @@ class TestClass(unittest.TestCase):
         # Act
         actual = BankAccount.update_balance(self.bank_account, -21)
 
-        # Assert
-        expected = 2110.123
-        self.assertEqual(actual, expected)
+        self.assertIsNone(actual)
+
+        self.assertEqual(2110.123, self.bank_account.balance)
 
     def test_update_balance_when_amount_received_is_non_numeric_balance_remain_unchanged(self):
 
@@ -92,19 +92,20 @@ class TestClass(unittest.TestCase):
         # Act
         actual = BankAccount.update_balance(self.bank_account, "Ridham")
 
+        self.assertIsNone(actual)
+
         # Assert
-        expected = 2131.123
-        self.assertEqual(actual, expected)
+        self.assertEqual(2131.123, self.bank_account.balance)
 
     def test_deposit_when_valid_amount_is_provided(self):
         # Arrange done already
         # Act
         
-        actual = BankAccount.update_balance(self.bank_account, 21)
+        actual = BankAccount.deposit(self.bank_account, 21)
 
-        # Assert
-        expected = 2152.123
-        self.assertEqual(actual, expected)
+        self.assertIsNone(actual)
+
+        self.assertEqual(self.bank_account.balance, 2152.123)
 
     def test_deposit_when_negative_amount_is_provided_raises_exception(self):
         # Arrange
@@ -116,11 +117,11 @@ class TestClass(unittest.TestCase):
         # Arrange done already
         # Act
         
-        actual = BankAccount.update_balance(self.bank_account, 21)
+        actual = BankAccount.withdraw(self.bank_account, 21)
 
+        self.assertIsNone(actual)
         # Assert
-        expected = 2152.123
-        self.assertEqual(actual, expected)
+        self.assertEqual(self.bank_account.balance, 2110.123)
 
     def test_withdraw_when_negative_amount_is_provided_raises_exception(self):
         # Arrange
