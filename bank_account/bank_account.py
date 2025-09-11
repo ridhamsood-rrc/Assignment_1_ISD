@@ -86,17 +86,15 @@ class BankAccount:
             ValueError: Raises when amount is negative.
         """
 
-        input_amount = input("Enter a deposit amount: ")
-
         try:
-            valid_amount = int(input_amount)
+            valid_amount = int(amount)
         except ValueError:
-            raise ValueError(f"Deposit amount: {input_amount} must be numeric.")
+            raise ValueError(f"Deposit amount: {amount} must be numeric.")
         
-        if input_amount.isdigit():
+        if valid_amount >= 0:
                 self.update_balance(valid_amount)
         else:
-            raise ValueError(f"Deposit amount: ${input_amount} must be positive.")
+            raise ValueError(f"Deposit amount: ${amount} must be positive.")
 
         return valid_amount
         
@@ -113,21 +111,19 @@ class BankAccount:
         
         """
 
-        input_amount = input("Enter a Withdraw amount: ")
-
         try:
-            valid_amount = int(input_amount)
+            valid_amount = int(amount)
         except ValueError:
-            raise ValueError(f"Withdraw amount: {input_amount} must be numeric.")
+            raise ValueError(f"Withdraw amount: {amount} must be numeric.")
         
-        if input_amount.isdigit():
+        if valid_amount >= 0:
             if valid_amount <= self.__balance:
                 real_amount = valid_amount * -1
                 self.update_balance(real_amount)
             else:
-                raise ValueError(f"${input_amount} must not exceed the current balance: ${self.__balance}")
+                raise ValueError(f"Withdraw amount: ${amount} must not exceed the current balance: ${self.__balance}")
         else:
-            raise ValueError(f"Withdraw amount: ${input_amount} must be positive.")
+            raise ValueError(f"Withdraw amount: ${amount} must be positive.")
         
         return real_amount
 
