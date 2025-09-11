@@ -11,7 +11,6 @@ __version__ = "1.0.0"
 
 from bank_account.bank_account import BankAccount
 import unittest
-from unittest.mock import patch
 
 class TestClass(unittest.TestCase):
 
