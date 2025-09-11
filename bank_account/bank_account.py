@@ -73,6 +73,8 @@ class BankAccount:
         except ValueError:
             final_balance = self.__balance
 
+        return final_balance
+
     def deposit(self, amount:int) -> None:
         """The amount deposited to the account.
         
@@ -95,6 +97,8 @@ class BankAccount:
                 self.update_balance(valid_amount)
         else:
             raise ValueError(f"Deposit amount: ${input_amount} must be positive.")
+
+        return valid_amount
         
     def withdraw(self, amount:int) -> None:
         """The withdraw method to calculate the balance.
@@ -124,6 +128,8 @@ class BankAccount:
                 raise ValueError(f"${input_amount} must not exceed the current balance: ${self.__balance}")
         else:
             raise ValueError(f"Withdraw amount: ${input_amount} must be positive.")
+        
+        return real_amount
 
     def __str__(self) -> str:
         """The str method to display the final content.
@@ -132,4 +138,4 @@ class BankAccount:
             str: The final statement displayed to the account holder.
         """
 
-        print(f"Account number: {self.__account_number} Balance: ${self.__balance:,.2f}")
+        return(f"Account number: {self.__account_number} Balance: ${self.__balance:,.2f}")
