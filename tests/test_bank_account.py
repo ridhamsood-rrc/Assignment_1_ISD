@@ -100,8 +100,7 @@ class TestClass(unittest.TestCase):
         # Arrange done already
         # Act
         
-        with patch("builtins.input", return_value="30"): 
-            actual = BankAccount.update_balance(self.bank_account, 21)
+        actual = BankAccount.update_balance(self.bank_account, 21)
 
         # Assert
         expected = 2152.123
@@ -110,16 +109,14 @@ class TestClass(unittest.TestCase):
     def test_deposit_when_negative_amount_is_provided_raises_exception(self):
         # Arrange
         # Act
-        with patch("builtins.input", return_value="-30"):
-            with self.assertRaises(ValueError):
-                actual = BankAccount.deposit(self.bank_account, 21)
+        with self.assertRaises(ValueError):
+            actual = BankAccount.deposit(self.bank_account, -21)
     
     def test_withdraw_when_valid_amount_is_provided(self):
         # Arrange done already
         # Act
         
-        with patch("builtins.input", return_value="30"): 
-            actual = BankAccount.update_balance(self.bank_account, 21)
+        actual = BankAccount.update_balance(self.bank_account, 21)
 
         # Assert
         expected = 2152.123
@@ -128,16 +125,14 @@ class TestClass(unittest.TestCase):
     def test_withdraw_when_negative_amount_is_provided_raises_exception(self):
         # Arrange
         # Act
-        with patch("builtins.input", return_value="-30"):
-            with self.assertRaises(ValueError):
-                actual = BankAccount.withdraw(self.bank_account, 21)
+        with self.assertRaises(ValueError):
+            actual = BankAccount.withdraw(self.bank_account, -21)
 
     def test_withdraw_when_amount_exceeds_balance_raises_exception(self):
         # Arrange
         # Act
-        with patch("builtins.input", return_value="12312"):
-            with self.assertRaises(ValueError):
-                actual = BankAccount.withdraw(self.bank_account, 21)
+        with self.assertRaises(ValueError):
+            actual = BankAccount.withdraw(self.bank_account, 3221)
 
     def test_str_return_expected_format(self):
 
