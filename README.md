@@ -12,4 +12,7 @@ Assignment 1: Develop classes to help the larger system.
 
 ## Encapsulation
 
-[use this section to explain how Encapsulation was achieved in the BankAccount class.]
+The Encapsulation in the BankAccount class was achieved by defining various
+functions and methods. Firstly, I defined the private attributes like
+__account_number and making it accessible by defining methods and
+properties.
