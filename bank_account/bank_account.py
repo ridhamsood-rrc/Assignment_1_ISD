@@ -16,10 +16,10 @@ class BankAccount(Subject, ABC):
         """ Initializes the init method.
         
         args:  
-            account_number(int): The account number of the account holder.
-            client_number(int): The client number of the account holder.
-            balance(float): The balance of the account holder.
-            date_created(date): Represents the date of the transactions.
+        account_number(int): The account number of the account holder.
+        client_number(int): The client number of the account holder.
+        balance(float): The balance of the account holder.
+        date_created(date): Represents the date of the transactions.
 
         Raises:
         ValueError: Raises an error if account number, client number is not
@@ -57,7 +57,7 @@ class BankAccount(Subject, ABC):
         """This helps to access the account number anywhere.
 
         Return:
-            int: The account number attribute.
+        int: The account number attribute.
         
         """
         return self.__account_number
@@ -67,7 +67,7 @@ class BankAccount(Subject, ABC):
         """This helps to access the client number anywhere.
         
         Return:
-            int: The client number attribute.
+        int: The client number attribute.
         """
         return self.__client_number
     
@@ -76,7 +76,7 @@ class BankAccount(Subject, ABC):
         """This helps to access the balance anywhere.
         
         Return:
-            float: The balance of the account holder.
+        float: The balance of the account holder.
         """
         return self.__balance
     
@@ -84,7 +84,7 @@ class BankAccount(Subject, ABC):
         """Updates the balance of the account holder.
         
         args:
-            amount(int): The amount which will be deposited or withdraw.
+        amount(int): The amount which will be deposited or withdraw.
         
         """
 
@@ -109,11 +109,11 @@ class BankAccount(Subject, ABC):
         """The amount deposited to the account.
         
         args:
-            amount(int): The amount which is deposited.
+        amount(int): The amount which is deposited.
 
         Raises:
-            ValueError: Raises when amount is not numeric.
-            ValueError: Raises when amount is negative.
+        ValueError: Raises when amount is not numeric.
+        ValueError: Raises when amount is negative.
         """
 
         try:
@@ -131,12 +131,12 @@ class BankAccount(Subject, ABC):
         """The withdraw method to calculate the balance.
         
         args:
-            amount(int): The amount which is withdrew by the account holder.
+        amount(int): The amount which is withdrew by the account holder.
 
         Raises:
-            ValueError: Raises when the amount is not numeric.
-            ValueError: Raises when the amount is more than the current balance.
-            ValueError: Raises when the amount is negative.
+        ValueError: Raises when the amount is not numeric.
+        ValueError: Raises when the amount is more than the current balance.
+        ValueError: Raises when the amount is negative.
         
         """
 
@@ -161,7 +161,7 @@ class BankAccount(Subject, ABC):
         """The str method to display the final content.
         
         Return:
-            str: The final statement displayed to the account holder.
+        str: The final statement displayed to the account holder.
         """
 
         return(f"Account number: {self.__account_number}\nBalance: ${self.__balance:,.2f}")
@@ -171,7 +171,8 @@ class BankAccount(Subject, ABC):
         """This method will calculate the service charges depending on the
         type of Bank Account.
         
-        Return: The services charges bank will charge.
+        Return:
+        float: The services charges bank will charge.
         """
 
         pass

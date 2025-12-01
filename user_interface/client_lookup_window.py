@@ -126,7 +126,9 @@ class ClientLookupWindow(LookupWindow):
     
     @Slot()
     def __on_filter_clicked(self): 
-        """"""
+        """This method defines the functionality of the filter button when
+        clicked.
+        """
 
         if self.filter_button.text() == "Apply Filter":
             account_number = self.filter_combo_box.currentIndex()
@@ -153,7 +155,13 @@ class ClientLookupWindow(LookupWindow):
         
     @Slot()
     def __toggle_filter(self, filter_on: bool):
-        """"""
+        """This method toggles the display of the filter widgets to indicate
+        to the user whether or not filtering is currently taking place.
+
+        Args:
+        filter_on(bool): Represents the status the filter button whether
+                        it is enabled or not. 
+        """
 
         if filter_on == True:
             self.filter_button.setEnabled(filter_on)
