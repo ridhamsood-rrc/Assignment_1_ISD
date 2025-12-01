@@ -21,6 +21,10 @@ Assignment 4: Incorporating Graphical User Interface(GUI)  into the PiXELL-River
 Financial banking system. The end product will include a lookup window from
 which users can view existing Client and corresponding Bank Account Data.
 
+Assignment 5: Producing an application for end-users to streamline the
+deployment process allowing users to easily install an application. An
+installer file bundle the entire body of work of the application into a distributable program.
+
 ## Encapsulation
 
 The Encapsulation in the BankAccount class was achieved by defining various
