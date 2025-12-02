@@ -15,50 +15,50 @@ documentation for details.
    :maxdepth: 2
    :caption: Contents:
 
+.. automodule:: client.client
+   :members:
+
 .. automodule:: bank_account.bank_account
-    :members: 
+   :members:
 
 .. automodule:: bank_account.chequing_account
-    :members: 
+   :members:
 
 .. automodule:: bank_account.investing_account
-    :members: 
+   :members:
 
 .. automodule:: bank_account.savings_account
-    :members:
-
-.. automodule:: client.client
-    :members: 
+   :members:
 
 .. automodule:: patterns.observer.observer
-    :members: 
+   :members:
 
 .. automodule:: patterns.observer.subject
-    :members: 
+   :members:
 
 .. automodule:: patterns.strategy.management_fee_strategy
-    :members: 
+   :members:
 
 .. automodule:: patterns.strategy.minimum_balance_strategy
-    :members: 
+   :members:
 
 .. automodule:: patterns.strategy.overdraft_strategy
-    :members: 
+   :members:
 
-.. automodule:: patterns.strategy.service_change_strategy
-    :members: 
+.. automodule:: patterns.strategy.service_charge_strategy
+   :members:
 
 .. automodule:: ui_superclasses.details_window
-    :members: 
+   :members:
 
 .. automodule:: ui_superclasses.lookup_window
-    :members: 
+   :members:
 
 .. automodule:: user_interface.account_details_window
-    :members: 
+   :members:
 
 .. automodule:: user_interface.client_lookup_window
-    :members: 
+   :members:
 
 .. automodule:: user_interface.manage_data
-    :members:
+   :members:

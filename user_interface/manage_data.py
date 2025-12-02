@@ -55,8 +55,9 @@ def load_data()->tuple[dict,dict]:
     """
     Populates a client dictionary and an account dictionary with 
     corresponding data from files within the data directory.
+
     Returns:
-        tuple containing client dictionary and account dictionary.
+    tuple containing client dictionary and account dictionary.
     """
     client_listing = {}
     accounts = {}
@@ -127,8 +128,9 @@ def update_data(updated_account: BankAccount) -> None:
     """
     A function to update the accounts.csv file with balance 
     data provided in the BankAccount argument.
+    
     Args:
-        updated_account (BankAccount): A bank account containing an updated balance.
+    updated_account (BankAccount): A bank account containing an updated balance.
     """
     updated_rows = []
 

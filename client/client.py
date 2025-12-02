@@ -1,6 +1,6 @@
 """This file contains the information of the client."""
 
-__name__ = "Ridham Sood"
+__author__ = "Ridham Sood"
 __version__ = "1.1.0"
 
 from email_validator import EmailNotValidError, validate_email

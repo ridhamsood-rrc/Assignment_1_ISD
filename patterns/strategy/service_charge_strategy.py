@@ -17,7 +17,7 @@ class ServiceChargeStrategy(ABC):
         
         Args:
         account(BankAccount): Represents the Bank account to which the
-                            charges will apply.
+        charges will apply.
         
         Return:
         float: The service charge to be applied.
