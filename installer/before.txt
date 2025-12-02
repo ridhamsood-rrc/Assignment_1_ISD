@@ -1,0 +1,8 @@
+Before starting the installation of the Accounts Manager Application, what this does is:
+
+1. It displays the balances of your accounts and their account types.
+2. You can also perform functions like withdrawal and deposit.
+3. You can filter your search by using the filter option at the end.
+
+Author Name:
+Ridham Sood
