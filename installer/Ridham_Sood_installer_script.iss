@@ -4,7 +4,7 @@
 
 #define MyAppName "Account Manager"
 #define MyAppVersion "1.0"
-#define MyAppPublisher "PiXELL-River (Ridham Sood)"
+#define MyAppPublisher "PiXELL_River (Ridham Sood)"
 #define MyAppURL "https://www.rrc.ca"
 #define MyAppExeName "pixell_river.exe"
 #define MyAppAssocName "My Program File"
@@ -14,7 +14,7 @@
 [Setup]
 ; NOTE: The value of AppId uniquely identifies this application. Do not use the same AppId value in installers for other applications.
 ; (To generate a new GUID, click Tools | Generate GUID inside the IDE.)
-AppId={{145641C9-2940-43DA-8E5A-127061034700}
+AppId={{E94B7DC3-214D-4E73-BFD2-08394D2D81CF}
 AppName={#MyAppName}
 AppVersion={#MyAppVersion}
 ;AppVerName={#MyAppName} {#MyAppVersion}
@@ -22,7 +22,7 @@ AppPublisher={#MyAppPublisher}
 AppPublisherURL={#MyAppURL}
 AppSupportURL={#MyAppURL}
 AppUpdatesURL={#MyAppURL}
-DefaultDirName={autopf}\{#MyAppName}
+DefaultDirName={autopf}\My Program
 UninstallDisplayIcon={app}\{#MyAppExeName}
 ; "ArchitecturesAllowed=x64compatible" specifies that Setup cannot run
 ; on anything but x64 and Windows 11 on Arm.
@@ -42,7 +42,7 @@ InfoAfterFile=C:\Users\soodr\Intermediate_software_development\project\Sood_Ridh
 OutputDir=C:\Users\soodr\Intermediate_software_development\project\Sood_Ridham_Project\isd_project\installer
 OutputBaseFilename=PixellAccountManager-installer
 SolidCompression=yes
-WizardStyle=modern dark polar
+WizardStyle=modern dark windows11
 
 [Languages]
 Name: "english"; MessagesFile: "compiler:Default.isl"
