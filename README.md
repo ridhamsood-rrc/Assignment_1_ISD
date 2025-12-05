@@ -64,3 +64,12 @@ as it makes the app more responsive and interactive. Using this, the code
 doesn't run in a fixed order but waits for the user to click the given
 button and then work according to the button clicked. It also makes the
 code run smoother and make the app responsive a lot.
+
+## Filtering
+
+In this assignment, filtering was used to show the data which the user
+selects from the filtering options. If the user wants to see the data
+according the account type, the user can select that criteria and then write
+the type of account like Chequing account to view the data of chequing
+account only. The filtering helps users find relevant information quickly and
+make search and navigation more efficient.
